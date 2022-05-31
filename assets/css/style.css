@@ -1,9 +1,12 @@
+/* sets font for whole page */
 body {
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     line-height: 1;
+    background-color: aqua;
 }
 
+/* description area of events */
 textarea {
     background: transparent;
     border: none;
@@ -13,57 +16,69 @@ textarea {
     padding: 10px;
 }
 
+/* id for live clock */
+#currentDay {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+/* Header of page */
 .jumbotron {
     text-align: center;
     background-color: transparent;
-    color: black;
+    color: #ffffff;
     border-radius: 0;
     border-bottom: 10px solid black;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
+/*  background of description gets called out with the titleblock class*/
 .time-block {
     text-align: center;
     border-radius: 15px;
 }
 
+/* text of event  */
 .description {
     white-space: pre-wrap;
     text-align: center;
     border-radius: 15px;
 }
 
-#currentDay {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bolder;
-}
-
+/* container for columns  */
 .row {
     white-space: pre-wrap;
     height: 80px;
     border-top: 1px solid white;
 }
 
+/* sets style properties for the hour  */
 .hour {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: blanchedalmond;
+    color: #ffffff;
     border-top: 1px dashed #000000;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
+/* changes timeblock background if timeblock is prior to current time */
 .past {
     background-color: #d3d3d3;
     color: white;
 }
 
+/* changes timeblock background if timeblock is prior to current time */
 .present {
     background-color: #ff6961;
     color: white;
 }
 
+/* changes timeblock background if timeblock is prior to current time */
 .future {
     background-color: #77dd77;
     color: white;
 }
 
+/* sets style properties for save button */
 .saveBtn {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
@@ -72,6 +87,7 @@ textarea {
     color: white;
 }
 
+/* when hovered over save button it gives anitimation and changes font size  */
 .saveBtn i:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;

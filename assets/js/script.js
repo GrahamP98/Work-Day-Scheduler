@@ -1,5 +1,8 @@
-// using moment.js to display time
-$('#currentDay').text(moment().format('MMMM Do, (dddd) YYYY'));
+// using moment.js to display time as a live clock
+window.setInterval (function () {
+    $('#currentDay').html(moment().format('dddd MM/DD/YYYY H:mm:ss'))
+}, 1000);
+
 
 //GLOBAL VARIABLES
 var saveBtn = $('.saveBtn');
@@ -21,11 +24,11 @@ function colorCoordinator() {
         var rHour = parseInt($(this).attr('id'));
 
         if (rHour > hour) {
-            $(this).addClass('future');
+            $(this).addClass("future");
         } else if (rHour === hour) {
-            $(this).addClass('present');
+            $(this).addClass("present");
         } else {
-            $(this).addClass('past');
+            $(this).addClass("past");
         }
     })
 };
